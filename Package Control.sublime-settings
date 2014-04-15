@@ -1,0 +1,31 @@
+{
+	"installed_packages":
+	[
+		"Abacus",
+		"AdvancedNewFile",
+		"Chain of Command",
+		"Cucumber",
+		"EasyMotion",
+		"Git",
+		"GitGutter",
+		"Glue",
+		"MarkAndMove",
+		"Markdown Extended",
+		"Monokai Extended",
+		"Open URL",
+		"Origami",
+		"Package Syncing",
+		"PowerCursors",
+		"Quick File Open",
+		"RubyTest",
+		"SideBarEnhancements",
+		"Sublime Files",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-jshint",
+		"SublimeLinter-ruby",
+		"Surround",
+		"Theme - Nil",
+		"TrailingSpaces"
+	]
+}
