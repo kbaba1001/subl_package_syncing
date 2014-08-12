@@ -12,16 +12,17 @@
   { "keys": ["ctrl+i"], "command": "unindent" },
   { "keys": ["ctrl+o"], "command": "indent" },
   { "keys": ["ctrl+j", "ctrl+j"], "command": "find_under_expand_skip" },
-  { "keys": ["super+shift+up"], "command": "select_lines", "args": {"forward": false} },
-  { "keys": ["super+shift+down"], "command": "select_lines", "args": {"forward": true} },
-  { "keys": ["ctrl+shift+,"], "command": "open_file", "args": {"file": "${packages}/User/Default (Linux).sublime-keymap"} },
+  { "keys": ["ctrl+,"], "command": "select_lines", "args": {"forward": true} },
+  { "keys": ["ctrl+shift+,"], "command": "select_lines", "args": {"forward": false} },
   { "keys": ["ctrl+g"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "git:"} },
   { "keys": ["ctrl+b"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "SublimeBookmarks:"} },
   { "keys": ["ctrl+shift+alt+f"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
   { "keys": ["ctrl+u"], "command": "toggle_side_bar" },
+  { "keys": ["ctrl+r"], "command": "goto_symbol_in_project" },
+  { "keys": ["ctrl+shift+i"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
 
-  // Convert Case: Swap Caseを割り当てたいがうまく動かない
-  // { "keys": ["ctrl+k", "s"], "command": "swap_case" },
+  // DrSync
+  { "keys": ["ctrl+shift+alt+enter"], "command": "drsync" },
 
   // 検索結果の画面でカーソル位置のファイルや行数にジャンプする
   { "keys": ["ctrl+j", "p"], "command": "prev_result" },
@@ -37,38 +38,62 @@
   { "keys": ["ctrl+shift+:", "<character>"], "command": "easy_motion", "args": {"select_text": true} },
   { "keys": ["ctrl+shift+:", "enter"], "command": "easy_motion", "args": {"select_text": true, "character": "enter"} },
 
+  // Jump Along Indent ( https://github.com/mwean/sublime_jump_along_indent )
+  { "keys": ["super+up"], "command": "jump_prev_indent" },
+  { "keys": ["super+shift+up"], "command": "jump_prev_indent", "args": { "extend_selection": true} },
+  { "keys": ["super+down"], "command": "jump_next_indent" },
+  { "keys": ["super+shift+down"], "command": "jump_next_indent", "args": { "extend_selection": true} },
+
   // OpenWithVim
   { "keys": ["ctrl+shift+z"], "command": "open_with_vim" },
 
   // create new file (RubyTest)
   { "keys": ["ctrl+n"], "command": "generate_file" },
+  // SublimeFiles
+  { "keys": ["ctrl+shift+n"], "command": "sublime_files", "args": {"command": "navigate"} },
 
   // Surround ( https://github.com/jcartledge/sublime-surround )
   { "keys": ["ctrl+k", "s"], "command": "surround_selection" },
   { "keys": ["ctrl+k", "c"], "command": "surround_change" },
   { "keys": ["ctrl+k", "d"], "command": "surround_delete" },
 
+  // Ruby Block Converter ( https://github.com/irohiroki/RubyBlockConverter )
+  { "keys": ["ctrl+k", "b", "b"], "command": "do_end_to_brace" },
+  { "keys": ["ctrl+k", "b", "d"], "command": "brace_to_do_end" },
+
   // GitGutter
   { "keys": ["ctrl+j", "g", "n"], "command": "git_gutter_next_change" },
   { "keys": ["ctrl+j", "g", "p"], "command": "git_gutter_prev_change" },
 
+  // RailsMigrationsList ( https://github.com/KELiON/RailsMigrationsList )
+  { "keys": ["ctrl+m", "l"], "command": "rails_migrations_list" },
+
   // Mark And Move ( https://github.com/colinta/SublimeMarkAndMove )
-  { "keys": ["ctrl+m", "ctrl+m"], "command": "mark_and_move_do_it_all" },
-  { "keys": ["ctrl+m", "n"], "command": "mark_and_move_next" },
-  { "keys": ["ctrl+m", "p"], "command": "mark_and_move_prev" },
-  { "keys": ["ctrl+m", "m"], "command": "mark_and_move_recall" },
-  { "keys": ["ctrl+m", "c"], "command": "mark_and_move_clear" },
+  { "keys": ["ctrl+shift+m", "ctrl+shift+m"], "command": "mark_and_move_do_it_all" },
+  { "keys": ["ctrl+shift+m", "n"], "command": "mark_and_move_next" },
+  { "keys": ["ctrl+shift+m", "p"], "command": "mark_and_move_prev" },
+  { "keys": ["ctrl+shift+m", "m"], "command": "mark_and_move_recall" },
+  { "keys": ["ctrl+shift+m", "c"], "command": "mark_and_move_clear" },
 
   // Power Cursors
-  { "keys": ["ctrl+shift+m", "ctrl+shift+m"], "command": "power_cursor_add" },
-  { "keys": ["ctrl+shift+m", "c"], "command": "power_cursor_remove", "context": [ { "key": "in_cursor_transition" } ] },
-  { "keys": ["ctrl+shift+m", "m"], "command": "power_cursor_activate", "context": [ { "key": "in_cursor_transition" } ] },
-  { "keys": ["ctrl+shift+m", "n"], "command": "power_cursor_select", "args": { "forward": true }, "context": [ { "key": "in_cursor_transition" } ] },
-  { "keys": ["ctrl+shift+m", "p"], "command": "power_cursor_select", "args": { "forward": false }, "context": [ { "key": "in_cursor_transition" } ] },
+  { "keys": ["ctrl+m", "ctrl+m"], "command": "power_cursor_add" },
+  { "keys": ["ctrl+m", "c"], "command": "power_cursor_remove", "context": [ { "key": "in_cursor_transition" } ] },
+  { "keys": ["ctrl+m", "m"], "command": "power_cursor_activate", "context": [ { "key": "in_cursor_transition" } ] },
+  { "keys": ["ctrl+m", "n"], "command": "power_cursor_select", "args": { "forward": true }, "context": [ { "key": "in_cursor_transition" } ] },
+  { "keys": ["ctrl+m", "p"], "command": "power_cursor_select", "args": { "forward": false }, "context": [ { "key": "in_cursor_transition" } ] },
   { "keys": ["escape"], "command": "power_cursor_exit", "context": [ { "key": "in_cursor_transition" } ] },
 
-  // SublimeFiles
-  { "keys": ["ctrl+shift+n"], "command": "sublime_files", "args": {"command": "navigate"} },
+  // bundle で使っている gem を文字列検索する
+  // ag_gems は ag "${*}" `bundle show --paths` を実行する
+  {
+    "keys": ["ctrl+t", "ctrl+g"],
+    "command": "shell_command",
+    "args": {
+      "command_prefix": "ag_gems",
+      "prompt": "ag gems",
+      "wait_for_completion": true
+    }
+  },
 
   // *** Window split ***
   // Origami

@@ -1,10 +1,10 @@
 {
-	"always_prompt_for_file_reload": false,
+	"animation_enabled": false,
 	"auto_find_in_selection": true,
 	"bold_folder_labels": true,
 	"caret_extra_width": 3,
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/User/Big Duo (SL).tmTheme",
+	"color_scheme": "Packages/User/cobalt2 (SL).tmTheme",
 	"cucumber_code_keywords":
 	[
 		"given",
@@ -56,7 +56,9 @@
 		"*.sublime-workspace",
 		"*.suo",
 		".DS_Store",
-		".tags"
+		".tags",
+		".tags_sorted_by_file",
+		".gemtags"
 	],
 	"fold_buttons": false,
 	"folder_exclude_patterns":
@@ -70,13 +72,11 @@
 		"tmp",
 		"log"
 	],
-	"font_face": "VL Gothic",
+	"font_face": "Ricty",
 	"font_size": 18.0,
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Clipboard Manager",
-		"Git Conflict Resolver",
 		"Vintage"
 	],
 	"indent_guide_options":
@@ -96,9 +96,10 @@
 	"show_encoding": true,
 	"show_full_path": true,
 	"tab_size": 2,
-	"theme": "Nil.sublime-theme",
+	"theme": "Cobalt2.sublime-theme",
 	"trailing_spaces_include_current_line": true,
 	"translate_tabs_to_spaces": true,
+	"tree_animation_enabled": false,
 	"trim_trailing_white_space_on_save": true,
-	"word_wrap": false
+	"word_wrap": true
 }

@@ -11,6 +11,11 @@
                 "@disable": false,
                 "args": [],
                 "excludes": []
+            },
+            "ruby": {
+                "@disable": false,
+                "args": [],
+                "excludes": []
             }
         },
         "mark_style": "outline",
@@ -28,7 +33,7 @@
         "rc_search_limit": 3,
         "shell_timeout": 10,
         "show_errors_on_save": false,
-        "show_marks_in_minimap": true,
+        "show_marks_in_minimap": false,
         "syntax_map": {
             "html (django)": "html",
             "html (rails)": "html",
