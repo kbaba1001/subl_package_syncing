@@ -33,10 +33,10 @@
   { "keys": ["ctrl+k", "o"], "command": "unfold" },
 
   // Easy Motion (https://github.com/tednaleid/sublime-EasyMotion)
-  { "keys": ["ctrl+:", "<character>"], "command": "easy_motion", "args": {"select_text": false} },
-  { "keys": ["ctrl+:", "enter"], "command": "easy_motion", "args": {"select_text": false, "character": "enter"} },
-  { "keys": ["ctrl+shift+:", "<character>"], "command": "easy_motion", "args": {"select_text": true} },
-  { "keys": ["ctrl+shift+:", "enter"], "command": "easy_motion", "args": {"select_text": true, "character": "enter"} },
+  { "keys": ["ctrl+l", "<character>"], "command": "easy_motion", "args": {"select_text": false} },
+  { "keys": ["ctrl+l", "enter"], "command": "easy_motion", "args": {"select_text": false, "character": "enter"} },
+  { "keys": ["ctrl+shift+l", "<character>"], "command": "easy_motion", "args": {"select_text": true} },
+  { "keys": ["ctrl+shift+l", "enter"], "command": "easy_motion", "args": {"select_text": true, "character": "enter"} },
 
   // Jump Along Indent ( https://github.com/mwean/sublime_jump_along_indent )
   { "keys": ["super+up"], "command": "jump_prev_indent" },
@@ -82,6 +82,16 @@
   { "keys": ["ctrl+m", "n"], "command": "power_cursor_select", "args": { "forward": true }, "context": [ { "key": "in_cursor_transition" } ] },
   { "keys": ["ctrl+m", "p"], "command": "power_cursor_select", "args": { "forward": false }, "context": [ { "key": "in_cursor_transition" } ] },
   { "keys": ["escape"], "command": "power_cursor_exit", "context": [ { "key": "in_cursor_transition" } ] },
+
+  // Goto-CSS-Declaration
+  {
+      "keys": ["ctrl+j", "c", "n"], "command": "goto_css_declaration",
+      "args": {"goto": "next"}
+  },
+  {
+      "keys": ["ctrl+j", "c", "p"],  "command": "goto_css_declaration",
+      "args": {"goto": "prev"}
+  },
 
   // bundle で使っている gem を文字列検索する
   // ag_gems は ag "${*}" `bundle show --paths` を実行する

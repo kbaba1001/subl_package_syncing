@@ -4,7 +4,7 @@
 	"bold_folder_labels": true,
 	"caret_extra_width": 3,
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/User/Big Duo (SL).tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Big Duo (SL).tmTheme",
 	"disable_formatted_linebreak": true,
 	"enable_telemetry": false,
 	"ensure_newline_at_eof_on_save": true,
@@ -32,7 +32,9 @@
 		".DS_Store",
 		".tags",
 		".tags_sorted_by_file",
-		".gemtags"
+		".gemtags",
+		"rspec.xml",
+		"*.gemspec"
 	],
 	"fold_buttons": false,
 	"folder_exclude_patterns":
@@ -47,7 +49,7 @@
 		"log"
 	],
 	"font_face": "Ricty",
-	"font_size": 18.0,
+	"font_size": 18,
 	"highlight_line": true,
 	"ignored_packages":
 	[
@@ -75,5 +77,5 @@
 	"translate_tabs_to_spaces": true,
 	"tree_animation_enabled": false,
 	"trim_trailing_white_space_on_save": true,
-	"word_wrap": true
+	"word_wrap": false
 }
