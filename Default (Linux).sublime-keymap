@@ -38,19 +38,13 @@
   { "keys": ["ctrl+shift+l", "<character>"], "command": "easy_motion", "args": {"select_text": true} },
   { "keys": ["ctrl+shift+l", "enter"], "command": "easy_motion", "args": {"select_text": true, "character": "enter"} },
 
-  // Jump Along Indent ( https://github.com/mwean/sublime_jump_along_indent )
-  { "keys": ["super+up"], "command": "jump_prev_indent" },
-  { "keys": ["super+shift+up"], "command": "jump_prev_indent", "args": { "extend_selection": true} },
-  { "keys": ["super+down"], "command": "jump_next_indent" },
-  { "keys": ["super+shift+down"], "command": "jump_next_indent", "args": { "extend_selection": true} },
-
   // OpenWithVim
   { "keys": ["ctrl+shift+z"], "command": "open_with_vim" },
 
   // create new file (RubyTest)
   { "keys": ["ctrl+n"], "command": "generate_file" },
   // SublimeFiles
-  { "keys": ["ctrl+shift+n"], "command": "sublime_files", "args": {"command": "navigate"} },
+  // { "keys": ["ctrl+shift+n"], "command": "sublime_files", "args": {"command": "navigate"} },
 
   // Surround ( https://github.com/jcartledge/sublime-surround )
   { "keys": ["ctrl+k", "s"], "command": "surround_selection" },
@@ -82,28 +76,6 @@
   { "keys": ["ctrl+m", "n"], "command": "power_cursor_select", "args": { "forward": true }, "context": [ { "key": "in_cursor_transition" } ] },
   { "keys": ["ctrl+m", "p"], "command": "power_cursor_select", "args": { "forward": false }, "context": [ { "key": "in_cursor_transition" } ] },
   { "keys": ["escape"], "command": "power_cursor_exit", "context": [ { "key": "in_cursor_transition" } ] },
-
-  // Goto-CSS-Declaration
-  {
-      "keys": ["ctrl+j", "c", "n"], "command": "goto_css_declaration",
-      "args": {"goto": "next"}
-  },
-  {
-      "keys": ["ctrl+j", "c", "p"],  "command": "goto_css_declaration",
-      "args": {"goto": "prev"}
-  },
-
-  // bundle で使っている gem を文字列検索する
-  // ag_gems は ag "${*}" `bundle show --paths` を実行する
-  {
-    "keys": ["ctrl+t", "ctrl+g"],
-    "command": "shell_command",
-    "args": {
-      "command_prefix": "ag_gems",
-      "prompt": "ag gems",
-      "wait_for_completion": true
-    }
-  },
 
   // *** Window split ***
   // Origami
